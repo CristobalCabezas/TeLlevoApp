@@ -1,0 +1,43 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="primary" routerLink="/home">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/lista-api">Historial</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="header">
+    <h1>Bienvenido {{userHome}}</h1>
+    <img src="assets/car_sharing.jpeg" alt="">
+  </div>
+
+ 
+  <ion-item>
+    <ion-input placeholder="Ingrese su nombre" [(ngModel)]="nombre"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input placeholder="Ingrese direccion" ></ion-input>
+  </ion-item>
+
+
+  <div>
+    <ion-label color="light" position="fixed">Programe su viaje: </ion-label>
+    <ion-datetime-button datetime="datetime"></ion-datetime-button>
+    <ion-modal [keepContentsMounted]="true">
+      <ng-template>
+        <ion-datetime id="datetime"></ion-datetime>
+      </ng-template>
+    </ion-modal>
+  </div>
+
+  <div >
+    <ion-button expand="full" shape="round" type="submit" (click) = "Mostrar()">Reservar viaje</ion-button>
+  </div>
+
+</ion-content>
