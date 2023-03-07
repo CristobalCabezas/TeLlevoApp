@@ -7,8 +7,12 @@
 <ion-content>
   <h2>Datos de un servidor externo</h2>
   <ion-list>
-    <button ion-item *ngFor ="let usuario of usuarios">
-      {{usuario.id}} - {{usuario.name}}
-    </button>
+    <ion-item *ngFor ="let usuario of usuarios">
+      <ion-label>
+        <h2>
+          {{usuario.id}} - {{usuario.name}}
+        </h2>
+      </ion-label>
+    </ion-item>
   </ion-list>
 </ion-content>

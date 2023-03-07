@@ -14,14 +14,14 @@
 <ion-content>
   <div id="header">
     <h1>Iniciar Sesion</h1>
-    <img src="assets/car_sharing.jpeg" alt="">
+    <img src="assets/car_sharing.jpg" alt="">
   </div>
 
 <form id="form" [formGroup]="formularioLogin">
     <div><ion-input type="text" color="light" formControlName="nombre" placeholder="Usuario"></ion-input></div>
     <div><ion-input type="password" color="light" formControlName="password" placeholder="Contraseña"></ion-input></div>
     <div><ion-button expand="full" shape="round" type="submit" [disabled]="!formularioLogin.valid" (click)="ingresar()" routerDirection="forward">Iniciar Sesion</ion-button></div>
-
+    <div><ion-button expand="full" shape="round" type="submit" routerLink="/restore">Recuperar contraseña</ion-button></div>
 </form>
 
 </ion-content>

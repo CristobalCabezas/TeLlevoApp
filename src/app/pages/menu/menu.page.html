@@ -1,24 +1,40 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-button color="primary" routerLink="/home">
+      <ion-button color="primary" routerLink="/choice">
         <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-buttons slot="end">
-      <ion-button routerLink="/lista-api">Historial</ion-button>
-    </ion-buttons>
+    <div id="title"><h1 color = "black">Pasajero</h1></div>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div id="header">
-    <h1>Bienvenido {{userHome}}</h1>
-    <img src="assets/car_sharing.jpeg" alt="">
-  </div>
-
+  <ion-content>
+    <div id="title"><h1>Viajes disponibles</h1></div>
+      <ion-list>
+      <ion-item *ngFor="let dato of datos">
+      <ion-item>
+        <ion-label>
+        <h2 class="colorBlue">N° viaje: {{dato.id}}</h2>
+        <h2 class="colorBlue">Fecha viaje: {{dato.fecha}}</h2>
+        <h2 class="colorBlue">Inicio: {{dato.origen}}</h2>
+        <h2 class="colorBlue">Destino: {{dato.destino}}</h2>
+        <h2 class="colorBlue">Conductor: {{dato.conductor}}</h2>
+        </ion-label>
+      </ion-item>
+      <ion-label slot="end" text-right>
+        <h2 class="colorBlue">Cupo: {{dato.cupo}}</h2>
+        <button [routerLink]="['/', 'vercupo', dato.id]">
+          Ver
+        </button>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  </ion-content>
  
-  <ion-item>
+
+
+  <!--<ion-item>
     <ion-input placeholder="Ingrese su nombre" [(ngModel)]="nombre"></ion-input>
   </ion-item>
   <ion-item>
@@ -36,8 +52,19 @@
     </ion-modal>
   </div>
 
+<ion-item (click)="addDirection()">
+  <ion-label class="normal">
+    Ubicación
+  </ion-label>
+  <ion-buttons>
+    <ion-button>
+      <ion-icon slot="icon-only" color="danger" name="location"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-item>
+
   <div >
     <ion-button expand="full" shape="round" type="submit" (click) = "Mostrar()">Reservar viaje</ion-button>
-  </div>
+  </div> 
 
-</ion-content>
+</ion-content> -->

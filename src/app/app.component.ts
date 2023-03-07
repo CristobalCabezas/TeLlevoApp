@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ConsumoAPIService } from './services/consumo-api.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  constructor(
+    private consumoApi:ConsumoAPIService
+  ) {}
+
+  getAllTasks() {
+    this.consumoApi.getAllTasks()
+    .subscribe(Datos => {
+      console.log(Datos);
+    });
+  }
+
 }

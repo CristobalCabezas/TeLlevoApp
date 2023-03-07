@@ -1,0 +1,28 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="primary" routerLink="/menu">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <div id="title"><h1 color = "black">Reservar</h1></div>    
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-item class="ion-padding">
+  <ion-card-content>
+          <ion-item>
+            <ion-label>
+            <h2 class="colorBlue">N° viaje: {{dato.id}}</h2>
+            <h2 class="colorBlue">Fecha viaje: {{dato.fecha}}</h2>
+            <h2 class="colorBlue">Inicio: {{dato.origen}}</h2>
+            <h2 class="colorBlue">Destino: {{dato.destino}}</h2>
+            <h2 class="colorBlue">Conductor: {{dato.conductor}}</h2>
+            <h2 class="colorBlue">Cupo restante: {{dato.cupo}}</h2>
+            </ion-label>
+          </ion-item>
+       <ion-button expand="full" shape="round" type="submit" (click) = "reservar(dato.id)">Reservar</ion-button>
+  </ion-card-content>
+</ion-item>

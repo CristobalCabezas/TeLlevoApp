@@ -29,14 +29,41 @@ const routes: Routes = [
     path: 'error404',
     loadChildren: () => import('./pages/error404/error404.module').then( m => m.Error404PageModule)
   },
-  /*{
-    path: '**',
-    redirectTo: 'error404',
-    pathMatch: 'full'
-  },*/
   {
     path: 'lista-api',
     loadChildren: () => import('./pages/lista-api/lista-api.module').then( m => m.ListaApiPageModule)
+  },
+  {
+    path: 'restore',
+    loadChildren: () => import('./pages/restore/restore.module').then( m => m.RestorePageModule)
+  },
+  {
+    path: 'choice',
+    loadChildren: () => import('./pages/choice/choice.module').then( m => m.ChoicePageModule),
+    canActivate: [IngresadoGuard],
+  },
+  {
+    path: 'driver',
+    loadChildren: () => import('./pages/driver/driver.module').then( m => m.DriverPageModule),
+    canActivate: [IngresadoGuard],
+  },
+  {
+    path: 'create',
+    loadChildren: () => import('./pages/create/create.module').then( m => m.CreatePageModule)
+  },
+  {
+    path: "edit/:postId",
+    loadChildren: () =>
+      import("./pages/create/create.module").then((m) => m.CreatePageModule),
+  },
+  {
+    path: 'vercupo/:postId',
+    loadChildren: () => import('./pages/reserve/reserve.module').then( m => m.ReservePageModule)
+  },
+  {
+    path: '**',
+    redirectTo: 'error404',
+    pathMatch: 'full'
   },
 ];
 

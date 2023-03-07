@@ -1,14 +1,22 @@
 ion-toolbar{
+    color: rgb(53, 45, 199);
     --background: #f5f5f3;
 
     ion-button{
+        color: rgb(53, 45, 199);
         text-transform: initial;
         font-size: 17px;
     }
 }
 
 ion-content{
+    
     --background: #f5f5f3;
+
+    #title{
+        color: rgb(53, 45, 199);
+
+    }
 
     #header{
     display: flex;

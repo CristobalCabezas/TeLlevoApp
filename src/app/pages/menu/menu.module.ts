@@ -5,6 +5,7 @@ import { IonicModule } from '@ionic/angular';
 import { InputModule } from 'src/app/components/input/input.module';
 import { MenuPageRoutingModule } from './menu-routing.module';
 import { MenuPage } from './menu.page';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
@@ -13,7 +14,8 @@ import { MenuPage } from './menu.page';
     ReactiveFormsModule,
     IonicModule,
     InputModule,
-    MenuPageRoutingModule
+    MenuPageRoutingModule,
+    HttpClientModule
   ],
   declarations: [MenuPage]
 })

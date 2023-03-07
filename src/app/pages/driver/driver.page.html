@@ -1,0 +1,46 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="primary" routerLink="/choice">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <div id="title"><h1 color = "black">Conductor</h1></div>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/create">Nuevo</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+ 
+  <ion-content>
+    <div id="title"><h1 color = "black">Sus viajes</h1></div>
+      <ion-list>
+      <ion-item *ngFor="let dato of datos">
+      <ion-item>
+        <ion-label>
+        <h2 class="colorBlue">N° viaje: {{dato.id}}</h2>
+        <h2 class="colorBlue">{{dato.id}}</h2>
+        <h2 class="colorBlue">Fecha viaje:</h2>
+        <h2 class="colorBlue">{{dato.fecha}}</h2>
+        <h2 class="colorBlue">Inicio:</h2>
+        <h2 class="colorBlue">{{dato.origen}}</h2>
+        <h2 class="colorBlue">Destino:</h2>
+        <h2 class="colorBlue">{{dato.destino}}</h2>
+        <h2 class="colorBlue">Conductor:</h2>
+        <h2 class="colorBlue">{{dato.conductor}}</h2>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+      <ion-label slot="down" text-right>
+        <h2 class="colorBlue">Cupo: {{dato.cupo}}</h2>
+        <button [routerLink]="['/', 'edit', dato.id]">
+          Modificar
+        </button>
+        <button (click)="removePost(dato.id)">
+          Eliminar
+        </button>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  </ion-content>

@@ -1,0 +1,63 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="primary" routerLink="/driver">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <div id="title"><h1>{{ editing ? 'Modificar' : 'Crear'}}</h1></div>    
+  </ion-toolbar>
+</ion-header>
+
+
+
+    <ion-item class="ion-padding">
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="floating">Nombre</ion-label>
+          <ion-input [(ngModel)]="dato.conductor"></ion-input>
+        </ion-item>
+        <ion-item> 
+          <ion-label position="floating">Origen</ion-label>
+          <ion-input [(ngModel)]="dato.origen"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Direccion de destino</ion-label>
+          <ion-input [(ngModel)]="dato.destino"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Cupo</ion-label>
+          <ion-input [(ngModel)]="dato.cupo"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-input [clearInput]="true" placeholder="Ingrese direccion" ></ion-input>
+        </ion-item>
+
+        <ion_item>
+          <ion-label color="light" position="fixed">Fecha: </ion-label>
+          <ion-datetime-button datetime="datetime"></ion-datetime-button>
+          <ion-modal [keepContentsMounted]="true">
+            <ng-template>
+              <ion-datetime [(ngModel)]="dato.fecha" id="datetime"></ion-datetime>
+            </ng-template>
+          </ion-modal>
+        </ion_item>
+
+        <ion-item (click)="addDirection()">
+          <ion-label class="normal">
+            Ubicación
+          </ion-label>
+          <ion-buttons>
+            <ion-button>
+              <ion-icon slot="icon-only" color="danger" name="location"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+
+        <ion-button expand="full" shape="round" type="submit" (click) = "editing? updatePost(): savePost()">{{ editing ? 'Modificar' : 'Crear'}} viaje</ion-button>
+
+      </ion-card-content>
+    </ion-item>
+
+

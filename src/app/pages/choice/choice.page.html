@@ -1,0 +1,23 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="primary" routerLink="/login">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="header">
+    <h1>Bienvenido {{userHome}}</h1>
+    <h1>¿Qué serás hoy?</h1>
+    <img src="assets/car_sharing.jpg" alt="">
+  </div>
+
+<form id="form" [formGroup]="formularioRestore">
+  <div><ion-button expand="full" shape="round" type="submit" routerDirection="forward" routerLink="/driver">Conductor</ion-button></div>
+  <div><ion-button expand="full" shape="round" type="submit" routerDirection="forward" routerLink="/menu">Pasajero</ion-button></div>
+</form>
+
+</ion-content>

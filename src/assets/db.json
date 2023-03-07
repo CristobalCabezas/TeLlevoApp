@@ -1,0 +1,76 @@
+{
+  "historial": [
+    {
+      "fecha": "18/08/2022",
+      "origen": "Geronimo de Alderete 476",
+      "destino": "Antonio Varas 666",
+      "conductor": "Perico Los Palotes",
+      "cupo": 1,
+      "id": "4"
+    },
+    {
+      "fecha": "30/07/2022",
+      "origen": "Nueva Providencia 10456",
+      "destino": "Teatinos 854",
+      "conductor": "Diego Cares",
+      "cupo": 1,
+      "id": "5"
+    },
+    {
+      "fecha": "30/10/2021",
+      "origen": "Antonio Varas 123, Santiago",
+      "destino": "Mi casa",
+      "conductor": "Pablo Gonzalez Soto",
+      "cupo": 1,
+      "id": "6"
+    },
+    {
+      "fecha": "",
+      "origen": "",
+      "destino": "",
+      "conductor": "",
+      "cupo": 0,
+      "id": "mwH0BiU"
+    },
+    {
+      "fecha": "",
+      "origen": "mi casa",
+      "destino": "su casa",
+      "conductor": "cristobal",
+      "cupo": "3",
+      "id": "S7BSSUk"
+    },
+    {
+      "fecha": "",
+      "origen": "pa lla",
+      "destino": "pa aca",
+      "conductor": "cristobalsadca",
+      "cupo": "3",
+      "id": "JjjkFtB"
+    },
+    {
+      "id": "Qv9ld9S",
+      "fecha": "",
+      "origen": "sdfgsd",
+      "destino": "sdfgfdg",
+      "conductor": "cristobal",
+      "cupo": "4"
+    },
+    {
+      "fecha": "",
+      "origen": "asdfasdf",
+      "destino": "asdfasdf",
+      "conductor": "adsfsadf",
+      "cupo": "3",
+      "id": "t2BGEIj"
+    },
+    {
+      "fecha": "",
+      "origen": "retgrhtdh",
+      "destino": "jilolioluio",
+      "conductor": "ertegfbgf",
+      "cupo": "wdwefwe",
+      "id": "wC7gSWB"
+    }
+  ]
+}

@@ -31,7 +31,7 @@ export class LoginPage implements OnInit {
     let navigationExtras: NavigationExtras = {
       state: {nombre: this.formularioLogin.value.nombre}
       };
-      this.router.navigate(['/menu'], navigationExtras);
+      this.router.navigate(['/choice'], navigationExtras);
   }
 
   async ingresar(){
