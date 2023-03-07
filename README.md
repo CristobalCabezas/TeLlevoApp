@@ -1,5 +1,5 @@
 # TeLlevoAPP
-Proyecto Aplicacion Movil
+Proyecto Programación de Aplicaciones Móviles (PGY4121) - DuocUC
 
 Primer semestre 2022
 
