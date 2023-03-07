@@ -1,7 +1,7 @@
 # TeLlevoAPP
 Proyecto Programación de Aplicaciones Móviles (PGY4121) - DuocUC
 
-Primer semestre 2022
+Segundo semestre 2022
 
 Tecnologias utilizadas:
  - IONIC
